@@ -22,20 +22,20 @@
                 <div class="col-lg-4 col-lg-offset-4">
                     <input type="text" class="form-control" name="query" placeholder="Job title or keywords ">
                     <input type="text" class="form-control" name="location" placeholder="Location"><br>
-                    <button type="submit" class="btn btn-success">Search</button>
+                    <button type="submit" class="btn btn-primary">Search</button>
                 </div>
             </form>
         </div>
         
         <footer class="footer">
             <div class="container">
-                <p class="text-muted">
+                <p class="text-muted" align='center'>
                     By Sam W. 2015 &nbsp;
                     <a href="index.htm">GitHub</a>
                 </p>
             </div>
         </footer>
-        
+    
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     </body>

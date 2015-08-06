@@ -1,7 +1,7 @@
 <%-- 
     Document   : results
     Created on : Aug 5, 2015, 11:49:14 AM
-    Author     : Desktop
+    Author     : Sam W.
 --%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -25,11 +25,16 @@
         <c:forEach var="job" items="${jobs}" varStatus="count">
             ${job.title}<br>
             ${job.company}<br>
-            &nbsp;&nbsp;X ${job.website}<br>
-            &nbsp;&nbsp;X ${job.industry}<br>
-            &nbsp;&nbsp;X ${job.numberOfRatings}<br>
-            <img src="${job.squareLogo}"/><br>
-            &nbsp;&nbsp;X ${job.overallRating}<br>
+            <button type="button" class="btn btn-success" data-toggle="popover" data-html="true" data-placement="right" 
+                title="<a href='https://${job.website}'>${job.company}</a>"
+                data-content="
+                Industry: ${job.industry}<br>
+                # Of Ratings: ${job.numberOfRatings}<br>
+                <img src='${job.squareLogo}'/><br>
+                Overall Rating: ${job.overallRating}<br>" 
+                >Glassdoor
+            </button>
+            
             ${job.country}<br>
             ${job.location}<br>
             ${job.source}<br>
@@ -42,5 +47,10 @@
             
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="popover"]').popover();
+            });
+        </script>
     </body>
 </html>
