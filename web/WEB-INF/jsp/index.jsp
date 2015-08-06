@@ -31,7 +31,7 @@
             <div class="container">
                 <p class="text-muted" align='center'>
                     By Sam W. 2015 &nbsp;
-                    <a href="index.htm">GitHub</a>
+                    <a href="index.htm">GitHub &nbsp Alpha 1</a>
                 </p>
             </div>
         </footer>

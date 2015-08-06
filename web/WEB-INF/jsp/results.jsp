@@ -21,30 +21,45 @@
     </head>
     <body>
         
-        <c:if test="${jobs.isEmpty()==true}">Empty!</c:if>
-        <c:forEach var="job" items="${jobs}" varStatus="count">
-            ${job.title}<br>
-            ${job.company}<br>
-            <button type="button" class="btn btn-success" data-toggle="popover" data-html="true" data-placement="right" 
-                title="<a href='https://${job.website}'>${job.company}</a>"
-                data-content="
-                Industry: ${job.industry}<br>
-                # Of Ratings: ${job.numberOfRatings}<br>
-                <img src='${job.squareLogo}'/><br>
-                Overall Rating: ${job.overallRating}<br>" 
-                >Glassdoor
-            </button>
+        <div class='container-fluid'>
+            <center>
+                <a href="index.htm"><img src ="assets/img/banner.png"/><br></a>
+                <c:if test="${jobs.isEmpty()==true}"><a href="index.htm" align="center">No jobs found, try again!</a></c:if>
+            </center>
             
-            ${job.country}<br>
-            ${job.location}<br>
-            ${job.source}<br>
-            ${job.date}<br>
-            ${job.snippet}<br>
-            <a href="${job.url}">Apply!</a><br>
-            ${job.relativeTime}<br>
-            -------------------<br>
-        </c:forEach>
-            
+            <div class="row col-lg-8 col-lg-offset-2">
+            <c:forEach var="job" items="${jobs}">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">${job.title}</h3>
+                    </div>
+                    <div class="panel-body">
+                        <button type="button" class="btn-sm btn-success" data-toggle="popover" data-html="true" data-placement="right" 
+                                title="<a href='https://${job.website}'>${job.company}</a>"
+                                data-content="
+                                <img src='${job.squareLogo}'/><br>
+                                Industry: ${job.industry}<br>
+                                Stars: ${job.overallRating}/5<br>
+                                Ratings: ${job.numberOfRatings}<br>
+                                " 
+                                >${job.company}
+                        </button><br>
+                        <div align="right">
+                            Location: ${job.location}&nbsp;(${job.country})<br>
+                            <i>Posted: ${job.relativeTime}</i><br><br>
+                        </div>
+                        <p>${job.snippet}</p><br>
+                        <center><button type="button" class="btn btn-default"><a href="${job.url}">Apply</a></button></center>
+                    </div>
+                </div>
+            </c:forEach>
+                
+            <ul class="pager">
+                <li class="previous disabled"><a href="#">← Older</a></li>
+                <li class="next"><a href="#">Newer →</a></li>
+            </ul>
+            </div>
+        </div>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
         <script>
