@@ -31,7 +31,7 @@
             <div class="container">
                 <p class="text-muted" align='center'>
                     By Sam W. 2015 &nbsp;
-                    <a href="index.htm">GitHub &nbsp Alpha 1</a>
+                    <a href="https://github.com/wngsam/Career-Hunter">GitHub</a> &nbsp Alpha 1
                 </p>
             </div>
         </footer>
