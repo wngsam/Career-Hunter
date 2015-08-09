@@ -22,8 +22,8 @@
                 <div class="col-lg-4 col-lg-offset-4">
                     <input type="text" class="form-control" name="query" placeholder="Job title or keywords "><br>
                     <input type="text" class="form-control" name="location" placeholder="Location"><br>
-                    Days Old:&nbsp;<input type="number" class="form-control" name="days" min="1" max="45" value="1"><br>
-                    Radius:&nbsp;<input type="number" class="form-control" name="radius" min="5" max="100" value="25"><br>
+                        Days:&nbsp;<input type="number" name="days" min="1" max="45" value="1">&nbsp;
+                        Radius:&nbsp;<input type="number" name="radius" min="5" max="100" value="25"><br><br>
                     <button type="submit" class="btn-lg btn-info">Search</button>
                 </div>
             </form>
