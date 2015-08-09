@@ -29,6 +29,8 @@ public class SearchController {
     @RequestMapping(value="/search", method = RequestMethod.POST)
     public ModelAndView doSearch(@RequestParam(value = "query") String query,
                                  @RequestParam(value = "location") String location,
+                                 @RequestParam(value ="days") int days,
+                                 @RequestParam(value ="radius") int radius,
                                  HttpServletRequest request){
         
         ModelAndView mv = new ModelAndView("results");
@@ -42,7 +44,7 @@ public class SearchController {
         String agent = request.getHeader("User-Agent");
         
         try {
-            mv.addObject("jobs", searchManager.searchIndeed(query, location, 25,1,"us",ip,agent));
+            mv.addObject("jobs", searchManager.searchIndeed(query,location,radius,days,"us",ip,agent));
         } catch (IOException ex) {
             Logger.getLogger(SearchController.class.getName()).log(Level.SEVERE, null, ex);
         }
