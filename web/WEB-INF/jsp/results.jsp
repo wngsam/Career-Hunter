@@ -21,19 +21,19 @@
     </head>
     <body>
         
-        <div class='container-fluid'>
+        <div class='container-fluid whitebg'>
             <center>
                 <c:if test="${jobs.isEmpty()==true}"><a href="index.htm" align="center">No jobs found, try again!</a></c:if>
             </center>
             
             <div class="row col-lg-8 col-lg-offset-2">
             <c:forEach var="job" items="${jobs}">
-                <div class="panel panel-info">
+                <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">${job.title}</h3>
                     </div>
                     <div class="panel-body">
-                        <button type="button" class="btn-sm btn-success" data-toggle="popover" data-html="true" data-placement="right" 
+                        <button type="button" class="btn-sm btn-info" data-toggle="popover" data-html="true" data-placement="right" 
                                 title="<a href='https://${job.website}'>${job.company}</a>"
                                 data-content="
                                 <img src='${job.squareLogo}'/><br>

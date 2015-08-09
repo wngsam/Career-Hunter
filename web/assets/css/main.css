@@ -37,3 +37,7 @@ body {
   position: relative;
   transform: translateY(50%);
 }
+
+.whitebg{
+	background-color: #F3F3F3;
+}
