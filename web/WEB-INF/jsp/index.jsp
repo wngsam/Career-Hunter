@@ -15,7 +15,16 @@
         <link href="assets/css/main.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-            
+        
+        <nav class="navbar navbar-inverse">
+            <form class="navbar-form navbar-right" id="login" method="POST" action="#">
+                            <input type="email" class="form-control input-sm" name="email" placeholder="E-mail">
+                            <input type="password" class="form-control input-sm" name="password" placeholder="Password">
+                            <button type="submit" class="btn btn-danger btn-sm">Login</button>
+                            <a href="#" class="btn btn-success btn-sm">Register</a>&nbsp;&nbsp;
+                        </form>
+        </nav>
+        
         <div class ="container-fluid vcenter" align="center">
             <a href="index.htm"><img src ="assets/img/banner.png"/></a>
             <form method="POST" action="search.htm">
