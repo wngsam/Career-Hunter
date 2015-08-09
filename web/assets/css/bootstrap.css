@@ -1086,7 +1086,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #000;
-  background-color: #FFFFFF;
+  background-color: #404040;
 }
 input,
 button,
@@ -1335,7 +1335,7 @@ mark,
   text-transform: capitalize;
 }
 .text-muted {
-  color: #A9A9A9;
+  color: #404040;
 }
 .text-primary {
   color: #337ab7;
@@ -2556,7 +2556,7 @@ output {
   font-size: 14px;
   line-height: 1.42857143;
   color: #555;
-  background-color: #fff;
+  background-color: #FFFFFF;
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -3255,7 +3255,7 @@ fieldset[disabled] .btn-success.active {
 }
 .btn-info {
   color: #fff;
-  background-color: #5bc0de;
+  background-color: #38CDF9;
   border-color: #46b8da;
 }
 .btn-info:focus,

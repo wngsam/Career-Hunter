@@ -23,7 +23,6 @@
         
         <div class='container-fluid'>
             <center>
-                <a href="index.htm"><img src ="assets/img/banner.png"/><br></a>
                 <c:if test="${jobs.isEmpty()==true}"><a href="index.htm" align="center">No jobs found, try again!</a></c:if>
             </center>
             

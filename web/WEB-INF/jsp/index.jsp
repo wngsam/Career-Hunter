@@ -16,13 +16,13 @@
     </head>
     <body>
             
-        <div class ="container-fluid" align="center">
+        <div class ="container-fluid vcenter" align="center">
             <a href="index.htm"><img src ="assets/img/banner.png"/></a>
             <form method="POST" action="search.htm">
                 <div class="col-lg-4 col-lg-offset-4">
-                    <input type="text" class="form-control" name="query" placeholder="Job title or keywords ">
+                    <input type="text" class="form-control" name="query" placeholder="Job title or keywords "><br>
                     <input type="text" class="form-control" name="location" placeholder="Location"><br>
-                    <button type="submit" class="btn btn-primary">Search</button>
+                    <button type="submit" class="btn-lg btn-info">Search</button>
                 </div>
             </form>
         </div>
@@ -31,7 +31,7 @@
             <div class="container">
                 <p class="text-muted" align='center'>
                     By Sam W. 2015 &nbsp;
-                    <a href="https://github.com/wngsam/Career-Hunter">GitHub</a> &nbsp Alpha 1
+                    <a href="https://github.com/wngsam/Career-Hunter">GitHub</a> &nbsp Alpha 2
                 </p>
             </div>
         </footer>

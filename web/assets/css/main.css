@@ -14,7 +14,7 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #F3F3F3;
+  background-color: #FFFFFF;
 }
 
 
@@ -29,4 +29,11 @@ body {
 }
 .container .text-muted {
   margin: 20px 0;
+}
+
+/* My CSS */
+
+.vcenter {
+  position: relative;
+  transform: translateY(50%);
 }
