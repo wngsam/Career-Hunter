@@ -16,4 +16,30 @@ public class UserManager {
     
     private HashMap<String, User> users;
     
+    public UserManager(){
+        users = new HashMap();
+    }
+    
+    public User login(String email, String password){
+        User user = users.get(email);
+        
+        if(user!=null){
+            if(user.getPassword().equals(password)){
+                return user;
+            }
+        }
+        
+        return null;
+    }
+    
+    public Boolean register(String email, String password){
+        
+        if(!users.containsKey(email)){
+            users.put(email, new User(email,password));
+            return true;
+        }
+        
+        return false;
+    }
+    
 }

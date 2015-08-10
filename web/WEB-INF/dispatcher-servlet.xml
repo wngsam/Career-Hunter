@@ -22,11 +22,17 @@
 <!--    <context:component-scan base-package="controllers"/>
     <mvc:annotation-driven/>-->
     
+    <bean id="userManager" class="managers.UserManager"></bean>
     <bean id="searchManager" class="managers.SearchManager"></bean>
     <bean id="indexController" class="controller.IndexController"></bean>
     <bean id="searchController" class="controller.SearchController">
         <property name="searchManager">
             <ref bean ="searchManager"></ref>
+        </property>
+    </bean>
+    <bean id="accountController" class="controller.AccountController">
+        <property name="userManager">
+            <ref bean ="userManager"></ref>
         </property>
     </bean>
     
