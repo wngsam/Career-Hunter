@@ -21,27 +21,28 @@
     </head>
     <body>
         
+        <jsp:include page="navbar.jsp" />
+        
         <div class='container-fluid whitebg'>
             <center>
-                <c:if test="${jobs.isEmpty()==true}"><a href="index.htm" align="center">No jobs found, try again!</a></c:if>
+                <c:if test="${jobs.isEmpty()}"><a href="index.htm" align="center">No jobs found, try again!</a></c:if>
             </center>
             
             <div class="row col-lg-8 col-lg-offset-2">
+                
             <c:forEach var="job" items="${jobs}">
+                
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">${job.title}</h3>
                     </div>
                     <div class="panel-body">
                         <button type="button" class="btn-sm btn-info" data-toggle="popover" data-html="true" data-placement="right" 
-                                title="<a href='https://${job.website}'>${job.company}</a>"
+                                title="MODAL TITLE"
                                 data-content="
-                                <img src='${job.squareLogo}'/><br>
-                                Industry: ${job.industry}<br>
-                                Stars: ${job.overallRating}/5<br>
-                                Ratings: ${job.numberOfRatings}<br>
+                                MODAL CONTENT
                                 " 
-                                >${job.company}
+                                >BUTTON NAME
                         </button><br>
                         <div align="right">
                             Location: ${job.location}&nbsp;(${job.country})<br>
@@ -51,19 +52,24 @@
                         <center><button type="button" class="btn btn-default"><a href="${job.url}">Apply</a></button></center>
                     </div>
                 </div>
+                    
             </c:forEach>
-                
             <ul class="pager">
-                <li class="previous disabled"><a href="#">← Older</a></li>
-                <li class="next"><a href="#">Newer →</a></li>
+                <li class="previous disabled" id="prev"><a href="prev.htm">← Prev</a></li>
+                <li class="next" id="next"><a href="next.htm">Next →</a></li>
             </ul>
             </div>
         </div>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        
         <script>
             $(document).ready(function(){
                 $('[data-toggle="popover"]').popover();
+                if(${canPrev}){
+                    $("#prev").removeClass("disabled");
+                }
+                if(${jobs.isEmpty()}){
+                    $("#next").addClass("disabled");
+                }
             });
         </script>
     </body>

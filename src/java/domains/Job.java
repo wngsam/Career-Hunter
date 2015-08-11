@@ -7,12 +7,12 @@ package domains;
 
 /**
  *
- * @author Desktop
+ * @author Sam W.
  */
 public class Job {
     
+    private String id;
     private String title;
-    private String company;
     private String country;
     private String location;
     private String source;
@@ -21,15 +21,11 @@ public class Job {
     private String url;
     private String relativeTime;
     
-    private String website;
-    private String industry;
-    private int numberOfRatings;
-    private String squareLogo;
-    private double overallRating;
+    private Company company;
 
-    public Job(String title, String company, String country, String location, String source, String date, String snippet, String url, String relativeTime) {
+    public Job(String id, String title, String country, String location, String source, String date, String snippet, String url, String relativeTime) {
+        this.id = id;
         this.title = title;
-        this.company = company;
         this.country = country;
         this.location = location;
         this.source = source;
@@ -39,68 +35,20 @@ public class Job {
         this.relativeTime = relativeTime;
     }
 
-    public void addCompanyInfo(String website, String industry, int numberOfRatings, String squareLogo, double overallRating){
-        this.website = website;
-        this.industry = industry;
-        this.numberOfRatings = numberOfRatings;
-        this.squareLogo = squareLogo;
-        this.overallRating = overallRating;
-    }
-    
-    public String getWebsite() {
-        return website;
+    public String getId() {
+        return id;
     }
 
-    public void setWebsite(String website) {
-        this.website = website;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getIndustry() {
-        return industry;
-    }
-
-    public void setIndustry(String industry) {
-        this.industry = industry;
-    }
-
-    public int getNumberOfRatings() {
-        return numberOfRatings;
-    }
-
-    public void setNumberOfRatings(int numberOfRatings) {
-        this.numberOfRatings = numberOfRatings;
-    }
-
-    public String getSquareLogo() {
-        return squareLogo;
-    }
-
-    public void setSquareLogo(String squareLogo) {
-        this.squareLogo = squareLogo;
-    }
-
-    public double getOverallRating() {
-        return overallRating;
-    }
-
-    public void setOverallRating(double overallRating) {
-        this.overallRating = overallRating;
-    }
-    
     public String getTitle() {
         return title;
     }
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
     }
 
     public String getCountry() {
@@ -157,6 +105,14 @@ public class Job {
 
     public void setRelativeTime(String relativeTime) {
         this.relativeTime = relativeTime;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
     
 }

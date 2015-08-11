@@ -15,12 +15,12 @@ public class User {
     
     private String email;
     private String password;
-    private ArrayList<JobMin> savedJobs;
+    private ArrayList<Job> jobs;
     
     public User(String email, String password){
         this.email=email;
         this.password=password;
-        savedJobs = new ArrayList();
+        jobs = new ArrayList();
     }
 
     public String getEmail() {
