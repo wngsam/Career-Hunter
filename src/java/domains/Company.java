@@ -51,7 +51,7 @@ public class Company {
         this.benefitsRating = benefitsRating;
         this.careerRating = careerRating;
         this.balanceRating = balanceRating;
-        this.recommendRating = recommendRating;
+        this.recommendRating = recommendRating*100;
     }
     
     public String getName() {
